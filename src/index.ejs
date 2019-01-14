@@ -1,0 +1,36 @@
+<% htmlWebpackPlugin.options.headScripts = htmlWebpackPlugin.options.headScripts || [] %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="A admin dashboard application demo built upon Ant Design and Dva.js">
+  <title>多挣B端</title>
+  <link rel="icon" href="http://www.newband.com/images1/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mescroll.js@1.4.0/mescroll.min.css">
+  <!-- <link rel="stylesheet" href="../src/routes/iosSelect.css"/>
+  <link rel="stylesheet" href="../src/routes/ReactPullLoad.css"/> -->
+  <!--[if lte IE 10]>
+      <script
+        src="https://as.alipayobjects.com/g/component/??console-polyfill/0.2.2/index.js,media-match/2.0.2/media.match.min.js"></script>
+  <![endif]-->
+  <% for (item of htmlWebpackPlugin.options.headScripts) { %>
+    <script src="<%= item %>"></script>
+  <% } %>
+</head>
+<style>
+.mescroll{
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			height: auto; /*如设置bottom:50px,则需height:auto才能生效*/
+		}
+</style>
+<body>
+  <div id="root"></div>
+</body>
+
+
+</html>
