@@ -2,7 +2,6 @@ import dva from 'dva';
 
 import './index.css';
 import {createBrowserHistory} from 'history';
-// import {bridge} from './utils/jsBridge';
 
 
 // 1. Initialize 创建应用
@@ -10,10 +9,6 @@ const app = dva({
 	initialState: {},
 	history: createBrowserHistory()
 });
-
-
-
-
 // 2. Plugins
 // app.use({});
 //创建应用
